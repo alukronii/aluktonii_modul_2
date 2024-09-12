@@ -12,7 +12,7 @@ public class Runner {
             int maxCapacity = 10;
             System.out.println("Начинается загрузка на ленту");
             while (scanner.hasNextLine()) {
-                String[] element =  scanner.nextLine().split(";");
+                String[] element = scanner.nextLine().split(";");
                 luggageLine.addLast(element[0]);
                 if (luggageLine.size() == maxCapacity) {
                     System.out.println("Лента загружена, начинается выдача багажа");
