@@ -31,9 +31,9 @@ public class Runner {
                 } catch (Exception e) {
                     continue;
                 }
-            } return info = "легкий" + Integer.toString(small) + "\n" +
-                "средний" + Integer.toString(medium) + "\n" +
-                "тяжелый" + Integer.toString(big);
+            } return info = "легкий " + Integer.toString(small) + "\n" +
+                "средний " + Integer.toString(medium) + "\n" +
+                "тяжелый " + Integer.toString(big);
         }
     }
 }
