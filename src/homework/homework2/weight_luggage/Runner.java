@@ -1,20 +1,14 @@
-package homework2.unload_luggage;
+package homework.homework2.weight_luggage;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) throws IOException {
-        countWeight("luggage.csv");
-        System.out.println(countWeight("luggage.csv"));
-    }
 
-    public static String countWeight(String fileName) throws IOException {
-        String info;
-        try (InputStream luggage = homework2.unload_luggage.Runner.class.getClassLoader()
-            .getResourceAsStream(fileName); Scanner scanner = new Scanner(luggage)) {
+        try (InputStream luggage = homework.homework2.unload_luggage.Runner.class.getClassLoader()
+            .getResourceAsStream("luggage.csv"); Scanner scanner = new Scanner(luggage)) {
             int small = 0;
             int medium = 0;
             int big = 0;
@@ -32,9 +26,10 @@ public class Runner {
                 } catch (Exception e) {
                     continue;
                 }
-            } return info = "легкий" + Integer.toString(small) + "\n" +
-                "средний" + Integer.toString(medium) + "\n" +
-                "тяжелый" + Integer.toString(big);
+            }
+            System.out.println(Integer.toString(small));
+            System.out.println(Integer.toString(medium));
+            System.out.println(Integer.toString(big));
         }
     }
 }
